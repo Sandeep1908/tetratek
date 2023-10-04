@@ -1,0 +1,2763 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script type="text/javascript">
+      var gform;
+      gform ||
+        (document.addEventListener("gform_main_scripts_loaded", function () {
+          gform.scriptsLoaded = !0;
+        }),
+        window.addEventListener("DOMContentLoaded", function () {
+          gform.domLoaded = !0;
+        }),
+        (gform = {
+          domLoaded: !1,
+          scriptsLoaded: !1,
+          initializeOnLoaded: function (o) {
+            gform.domLoaded && gform.scriptsLoaded
+              ? o()
+              : !gform.domLoaded && gform.scriptsLoaded
+              ? window.addEventListener("DOMContentLoaded", o)
+              : document.addEventListener("gform_main_scripts_loaded", o);
+          },
+          hooks: { action: {}, filter: {} },
+          addAction: function (o, n, r, t) {
+            gform.addHook("action", o, n, r, t);
+          },
+          addFilter: function (o, n, r, t) {
+            gform.addHook("filter", o, n, r, t);
+          },
+          doAction: function (o) {
+            gform.doHook("action", o, arguments);
+          },
+          applyFilters: function (o) {
+            return gform.doHook("filter", o, arguments);
+          },
+          removeAction: function (o, n) {
+            gform.removeHook("action", o, n);
+          },
+          removeFilter: function (o, n, r) {
+            gform.removeHook("filter", o, n, r);
+          },
+          addHook: function (o, n, r, t, i) {
+            null == gform.hooks[o][n] && (gform.hooks[o][n] = []);
+            var e = gform.hooks[o][n];
+            null == i && (i = n + "_" + e.length),
+              gform.hooks[o][n].push({
+                tag: i,
+                callable: r,
+                priority: (t = null == t ? 10 : t),
+              });
+          },
+          doHook: function (n, o, r) {
+            var t;
+            if (
+              ((r = Array.prototype.slice.call(r, 1)),
+              null != gform.hooks[n][o] &&
+                ((o = gform.hooks[n][o]).sort(function (o, n) {
+                  return o.priority - n.priority;
+                }),
+                o.forEach(function (o) {
+                  "function" != typeof (t = o.callable) && (t = window[t]),
+                    "action" == n
+                      ? t.apply(null, r)
+                      : (r[0] = t.apply(null, r));
+                })),
+              "filter" == n)
+            )
+              return r[0];
+          },
+          removeHook: function (o, n, t, i) {
+            var r;
+            null != gform.hooks[o][n] &&
+              ((r = (r = gform.hooks[o][n]).filter(function (o, n, r) {
+                return !!(
+                  (null != i && i != o.tag) ||
+                  (null != t && t != o.priority)
+                );
+              })),
+              (gform.hooks[o][n] = r));
+          },
+        }));
+    </script>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="../wp-content/themes/magellan/style_ver%3D1.1.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+    <title>About Us | Tetratek</title>
+    <link rel="canonical" href="https://magellanpower.com.au/about-us/" />
+   
+    <script type="application/ld+json" class="yoast-schema-graph">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "https://magellanpower.com.au/about-us/",
+            "url": "https://magellanpower.com.au/about-us/",
+            "name": "About Us | Tetratek",
+            "isPartOf": { "@id": "https://magellanpower.com.au/#website" },
+            "datePublished": "2023-06-23T02:09:27+00:00",
+            "dateModified": "2023-07-27T00:05:07+00:00",
+            "breadcrumb": {
+              "@id": "https://magellanpower.com.au/about-us/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": ["https://magellanpower.com.au/about-us/"]
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://magellanpower.com.au/about-us/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://54.206.133.178:443/"
+              },
+              { "@type": "ListItem", "position": 2, "name": "About Us" }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://magellanpower.com.au/#website",
+            "url": "https://magellanpower.com.au/",
+            "name": "Tetratek",
+            "description": "Total peace of mind",
+            "publisher": {
+              "@id": "https://magellanpower.com.au/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://magellanpower.com.au/?s={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://magellanpower.com.au/#organization",
+            "name": "Tetratek",
+            "url": "https://magellanpower.com.au/",
+            "logo": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://magellanpower.com.au/#/schema/logo/image/",
+              "url": "https://magellanpower.com.au/wp-content/uploads/2021/11/Logo.png",
+              "contentUrl": "https://magellanpower.com.au/wp-content/uploads/2021/11/Logo.png",
+              "width": 400,
+              "height": 200,
+              "caption": "Tetratek"
+            },
+            "image": {
+              "@id": "https://magellanpower.com.au/#/schema/logo/image/"
+            }
+          }
+        ]
+      }
+    </script>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Tetratek &raquo; Feed"
+      href="https://magellanpower.com.au/feed/"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Tetratek &raquo; Comments Feed"
+      href="https://magellanpower.com.au/comments/feed/"
+    />
+    <script type="text/javascript">
+      window._wpemojiSettings = {
+        baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/",
+        ext: ".png",
+        svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/",
+        svgExt: ".svg",
+        source: {
+          concatemoji:
+            "https:\/\/magellanpower.com.au\/wp-includes\/js\/wp-emoji-release.min.js",
+        },
+      };
+      /*! This file is auto-generated */
+      !(function (i, n) {
+        var o, s, e;
+        function c(e) {
+          try {
+            var t = { supportTests: e, timestamp: new Date().valueOf() };
+            sessionStorage.setItem(o, JSON.stringify(t));
+          } catch (e) {}
+        }
+        function p(e, t, n) {
+          e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+            e.fillText(t, 0, 0);
+          var t = new Uint32Array(
+              e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+            ),
+            r =
+              (e.clearRect(0, 0, e.canvas.width, e.canvas.height),
+              e.fillText(n, 0, 0),
+              new Uint32Array(
+                e.getImageData(0, 0, e.canvas.width, e.canvas.height).data
+              ));
+          return t.every(function (e, t) {
+            return e === r[t];
+          });
+        }
+        function u(e, t, n) {
+          switch (t) {
+            case "flag":
+              return n(
+                e,
+                "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f",
+                "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f"
+              )
+                ? !1
+                : !n(
+                    e,
+                    "\ud83c\uddfa\ud83c\uddf3",
+                    "\ud83c\uddfa\u200b\ud83c\uddf3"
+                  ) &&
+                    !n(
+                      e,
+                      "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+                      "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"
+                    );
+            case "emoji":
+              return !n(
+                e,
+                "\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff",
+                "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff"
+              );
+          }
+          return !1;
+        }
+        function f(e, t, n) {
+          var r =
+              "undefined" != typeof WorkerGlobalScope &&
+              self instanceof WorkerGlobalScope
+                ? new OffscreenCanvas(300, 150)
+                : i.createElement("canvas"),
+            a = r.getContext("2d", { willReadFrequently: !0 }),
+            o = ((a.textBaseline = "top"), (a.font = "600 32px Arial"), {});
+          return (
+            e.forEach(function (e) {
+              o[e] = t(a, e, n);
+            }),
+            o
+          );
+        }
+        function t(e) {
+          var t = i.createElement("script");
+          (t.src = e), (t.defer = !0), i.head.appendChild(t);
+        }
+        "undefined" != typeof Promise &&
+          ((o = "wpEmojiSettingsSupports"),
+          (s = ["flag", "emoji"]),
+          (n.supports = { everything: !0, everythingExceptFlag: !0 }),
+          (e = new Promise(function (e) {
+            i.addEventListener("DOMContentLoaded", e, { once: !0 });
+          })),
+          new Promise(function (t) {
+            var n = (function () {
+              try {
+                var e = JSON.parse(sessionStorage.getItem(o));
+                if (
+                  "object" == typeof e &&
+                  "number" == typeof e.timestamp &&
+                  new Date().valueOf() < e.timestamp + 604800 &&
+                  "object" == typeof e.supportTests
+                )
+                  return e.supportTests;
+              } catch (e) {}
+              return null;
+            })();
+            if (!n) {
+              if (
+                "undefined" != typeof Worker &&
+                "undefined" != typeof OffscreenCanvas &&
+                "undefined" != typeof URL &&
+                URL.createObjectURL &&
+                "undefined" != typeof Blob
+              )
+                try {
+                  var e =
+                      "postMessage(" +
+                      f.toString() +
+                      "(" +
+                      [JSON.stringify(s), u.toString(), p.toString()].join(
+                        ","
+                      ) +
+                      "));",
+                    r = new Blob([e], { type: "text/javascript" }),
+                    a = new Worker(URL.createObjectURL(r), {
+                      name: "wpTestEmojiSupports",
+                    });
+                  return void (a.onmessage = function (e) {
+                    c((n = e.data)), a.terminate(), t(n);
+                  });
+                } catch (e) {}
+              c((n = f(s, u, p)));
+            }
+            t(n);
+          })
+            .then(function (e) {
+              for (var t in e)
+                (n.supports[t] = e[t]),
+                  (n.supports.everything =
+                    n.supports.everything && n.supports[t]),
+                  "flag" !== t &&
+                    (n.supports.everythingExceptFlag =
+                      n.supports.everythingExceptFlag && n.supports[t]);
+              (n.supports.everythingExceptFlag =
+                n.supports.everythingExceptFlag && !n.supports.flag),
+                (n.DOMReady = !1),
+                (n.readyCallback = function () {
+                  n.DOMReady = !0;
+                });
+            })
+            .then(function () {
+              return e;
+            })
+            .then(function () {
+              var e;
+              n.supports.everything ||
+                (n.readyCallback(),
+                (e = n.source || {}).concatemoji
+                  ? t(e.concatemoji)
+                  : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)));
+            }));
+      })((window, document), window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="wp-block-library-css"
+      href="../wp-includes/css/dist/block-library/style.min.css"
+      type="text/css"
+      media="all"
+    />
+    <style id="classic-theme-styles-inline-css" type="text/css">
+      /*! This file is auto-generated */
+      .wp-block-button__link {
+        color: #fff;
+        background-color: #32373c;
+        border-radius: 9999px;
+        box-shadow: none;
+        text-decoration: none;
+        padding: calc(0.667em + 2px) calc(1.333em + 2px);
+        font-size: 1.125em;
+      }
+      .wp-block-file__button {
+        background: #32373c;
+        color: #fff;
+        text-decoration: none;
+      }
+    </style>
+    <style id="global-styles-inline-css" type="text/css">
+      body {
+        --wp--preset--color--black: #000000;
+        --wp--preset--color--cyan-bluish-gray: #abb8c3;
+        --wp--preset--color--white: #ffffff;
+        --wp--preset--color--pale-pink: #f78da7;
+        --wp--preset--color--vivid-red: #cf2e2e;
+        --wp--preset--color--luminous-vivid-orange: #ff6900;
+        --wp--preset--color--luminous-vivid-amber: #fcb900;
+        --wp--preset--color--light-green-cyan: #7bdcb5;
+        --wp--preset--color--vivid-green-cyan: #00d084;
+        --wp--preset--color--pale-cyan-blue: #8ed1fc;
+        --wp--preset--color--vivid-cyan-blue: #0693e3;
+        --wp--preset--color--vivid-purple: #9b51e0;
+        --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(
+          135deg,
+          rgba(6, 147, 227, 1) 0%,
+          rgb(155, 81, 224) 100%
+        );
+        --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(
+          135deg,
+          rgb(122, 220, 180) 0%,
+          rgb(0, 208, 130) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(
+          135deg,
+          rgba(252, 185, 0, 1) 0%,
+          rgba(255, 105, 0, 1) 100%
+        );
+        --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(
+          135deg,
+          rgba(255, 105, 0, 1) 0%,
+          rgb(207, 46, 46) 100%
+        );
+        --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(
+          135deg,
+          rgb(238, 238, 238) 0%,
+          rgb(169, 184, 195) 100%
+        );
+        --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(
+          135deg,
+          rgb(74, 234, 220) 0%,
+          rgb(151, 120, 209) 20%,
+          rgb(207, 42, 186) 40%,
+          rgb(238, 44, 130) 60%,
+          rgb(251, 105, 98) 80%,
+          rgb(254, 248, 76) 100%
+        );
+        --wp--preset--gradient--blush-light-purple: linear-gradient(
+          135deg,
+          rgb(255, 206, 236) 0%,
+          rgb(152, 150, 240) 100%
+        );
+        --wp--preset--gradient--blush-bordeaux: linear-gradient(
+          135deg,
+          rgb(254, 205, 165) 0%,
+          rgb(254, 45, 45) 50%,
+          rgb(107, 0, 62) 100%
+        );
+        --wp--preset--gradient--luminous-dusk: linear-gradient(
+          135deg,
+          rgb(255, 203, 112) 0%,
+          rgb(199, 81, 192) 50%,
+          rgb(65, 88, 208) 100%
+        );
+        --wp--preset--gradient--pale-ocean: linear-gradient(
+          135deg,
+          rgb(255, 245, 203) 0%,
+          rgb(182, 227, 212) 50%,
+          rgb(51, 167, 181) 100%
+        );
+        --wp--preset--gradient--electric-grass: linear-gradient(
+          135deg,
+          rgb(202, 248, 128) 0%,
+          rgb(113, 206, 126) 100%
+        );
+        --wp--preset--gradient--midnight: linear-gradient(
+          135deg,
+          rgb(2, 3, 129) 0%,
+          rgb(40, 116, 252) 100%
+        );
+        --wp--preset--font-size--small: 13px;
+        --wp--preset--font-size--medium: 20px;
+        --wp--preset--font-size--large: 36px;
+        --wp--preset--font-size--x-large: 42px;
+        --wp--preset--spacing--20: 0.44rem;
+        --wp--preset--spacing--30: 0.67rem;
+        --wp--preset--spacing--40: 1rem;
+        --wp--preset--spacing--50: 1.5rem;
+        --wp--preset--spacing--60: 2.25rem;
+        --wp--preset--spacing--70: 3.38rem;
+        --wp--preset--spacing--80: 5.06rem;
+        --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+        --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+        --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1),
+          6px 6px rgba(0, 0, 0, 1);
+        --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+      }
+      :where(.is-layout-flex) {
+        gap: 0.5em;
+      }
+      :where(.is-layout-grid) {
+        gap: 0.5em;
+      }
+      body .is-layout-flow > .alignleft {
+        float: left;
+        margin-inline-start: 0;
+        margin-inline-end: 2em;
+      }
+      body .is-layout-flow > .alignright {
+        float: right;
+        margin-inline-start: 2em;
+        margin-inline-end: 0;
+      }
+      body .is-layout-flow > .aligncenter {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      body .is-layout-constrained > .alignleft {
+        float: left;
+        margin-inline-start: 0;
+        margin-inline-end: 2em;
+      }
+      body .is-layout-constrained > .alignright {
+        float: right;
+        margin-inline-start: 2em;
+        margin-inline-end: 0;
+      }
+      body .is-layout-constrained > .aligncenter {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      body
+        .is-layout-constrained
+        > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+        max-width: var(--wp--style--global--content-size);
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      body .is-layout-constrained > .alignwide {
+        max-width: var(--wp--style--global--wide-size);
+      }
+      body .is-layout-flex {
+        display: flex;
+      }
+      body .is-layout-flex {
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      body .is-layout-flex > * {
+        margin: 0;
+      }
+      body .is-layout-grid {
+        display: grid;
+      }
+      body .is-layout-grid > * {
+        margin: 0;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+      }
+      :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+      }
+      .has-black-color {
+        color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-color {
+        color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-color {
+        color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-color {
+        color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-color {
+        color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-color {
+        color: var(--wp--preset--color--luminous-vivid-orange) !important;
+      }
+      .has-luminous-vivid-amber-color {
+        color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-color {
+        color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-color {
+        color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-color {
+        color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-color {
+        color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-color {
+        color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-background-color {
+        background-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-background-color {
+        background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-background-color {
+        background-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-background-color {
+        background-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-background-color {
+        background-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-background-color {
+        background-color: var(
+          --wp--preset--color--luminous-vivid-amber
+        ) !important;
+      }
+      .has-light-green-cyan-background-color {
+        background-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-background-color {
+        background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-background-color {
+        background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-background-color {
+        background-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-black-border-color {
+        border-color: var(--wp--preset--color--black) !important;
+      }
+      .has-cyan-bluish-gray-border-color {
+        border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+      }
+      .has-white-border-color {
+        border-color: var(--wp--preset--color--white) !important;
+      }
+      .has-pale-pink-border-color {
+        border-color: var(--wp--preset--color--pale-pink) !important;
+      }
+      .has-vivid-red-border-color {
+        border-color: var(--wp--preset--color--vivid-red) !important;
+      }
+      .has-luminous-vivid-orange-border-color {
+        border-color: var(
+          --wp--preset--color--luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-amber-border-color {
+        border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+      }
+      .has-light-green-cyan-border-color {
+        border-color: var(--wp--preset--color--light-green-cyan) !important;
+      }
+      .has-vivid-green-cyan-border-color {
+        border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+      }
+      .has-pale-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+      }
+      .has-vivid-cyan-blue-border-color {
+        border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+      }
+      .has-vivid-purple-border-color {
+        border-color: var(--wp--preset--color--vivid-purple) !important;
+      }
+      .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+        background: var(
+          --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple
+        ) !important;
+      }
+      .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+        background: var(
+          --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan
+        ) !important;
+      }
+      .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange
+        ) !important;
+      }
+      .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+        background: var(
+          --wp--preset--gradient--luminous-vivid-orange-to-vivid-red
+        ) !important;
+      }
+      .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+        background: var(
+          --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray
+        ) !important;
+      }
+      .has-cool-to-warm-spectrum-gradient-background {
+        background: var(
+          --wp--preset--gradient--cool-to-warm-spectrum
+        ) !important;
+      }
+      .has-blush-light-purple-gradient-background {
+        background: var(--wp--preset--gradient--blush-light-purple) !important;
+      }
+      .has-blush-bordeaux-gradient-background {
+        background: var(--wp--preset--gradient--blush-bordeaux) !important;
+      }
+      .has-luminous-dusk-gradient-background {
+        background: var(--wp--preset--gradient--luminous-dusk) !important;
+      }
+      .has-pale-ocean-gradient-background {
+        background: var(--wp--preset--gradient--pale-ocean) !important;
+      }
+      .has-electric-grass-gradient-background {
+        background: var(--wp--preset--gradient--electric-grass) !important;
+      }
+      .has-midnight-gradient-background {
+        background: var(--wp--preset--gradient--midnight) !important;
+      }
+      .has-small-font-size {
+        font-size: var(--wp--preset--font-size--small) !important;
+      }
+      .has-medium-font-size {
+        font-size: var(--wp--preset--font-size--medium) !important;
+      }
+      .has-large-font-size {
+        font-size: var(--wp--preset--font-size--large) !important;
+      }
+      .has-x-large-font-size {
+        font-size: var(--wp--preset--font-size--x-large) !important;
+      }
+      .wp-block-navigation a:where(:not(.wp-element-button)) {
+        color: inherit;
+      }
+      :where(.wp-block-post-template.is-layout-flex) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-post-template.is-layout-grid) {
+        gap: 1.25em;
+      }
+      :where(.wp-block-columns.is-layout-flex) {
+        gap: 2em;
+      }
+      :where(.wp-block-columns.is-layout-grid) {
+        gap: 2em;
+      }
+      .wp-block-pullquote {
+        font-size: 1.5em;
+        line-height: 1.6;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="fonts-css"
+      href="../wp-content/themes/magellan/fonts/fonts.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="grid-css"
+      href="../wp-content/themes/magellan/css/grid.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="common-style-css"
+      href="../wp-content/themes/magellan/css/common.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="style-css"
+      href="../wp-content/themes/magellan/css/style.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="responsive-css"
+      href="../wp-content/themes/magellan/css/responsive.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="swiper-css"
+      href="../wp-content/themes/magellan/css/swiper.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="fancybox-css"
+      href="../wp-content/plugins/easy-fancybox/fancybox/1.3.28/jquery.fancybox.min.css"
+      type="text/css"
+      media="screen"
+    />
+    <style id="fancybox-inline-css" type="text/css">
+      .fancybox-hidden {
+        display: none;
+      }
+      #fancybox-content .fancybox-hidden,
+      #fancybox-tmp .fancybox-hidden {
+        display: revert;
+      }
+    </style>
+    <script type="text/javascript" id="breeze-prefetch-js-extra">
+      /*  */
+      var breeze_prefetch = {
+        local_url: "https:\/\/magellanpower.com.au",
+        ignore_remote_prefetch: "1",
+        ignore_list: ["\/wp-admin\/"],
+      };
+      /*  */
+    </script>
+    <script
+      type="text/javascript"
+      src="../wp-content/plugins/breeze/assets/js/js-front-end/breeze-prefetch-links.min.js"
+      id="breeze-prefetch-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../wp-includes/js/jquery/jquery.min.js"
+      id="jquery-core-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../wp-includes/js/jquery/jquery-migrate.min.js"
+      id="jquery-migrate-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../wp-content/themes/magellan/js/jquery.matchHeight.js"
+      id="jquery.matchHeight-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../wp-content/themes/magellan/js/scrollIt.js"
+      id="scrollIt-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../wp-content/themes/magellan/js/swiper.js"
+      id="swiper-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../wp-content/themes/magellan/js/slick.min.js"
+      id="slick-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../wp-content/themes/magellan/js/isotope.pkgd.js"
+      id="isotope-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../wp-content/themes/magellan/js/scripts.js"
+      id="scripts-js"
+    ></script>
+    <link
+    rel="https://api.w.org/"
+    href="https://magellanpower.com.au/wp-json/"
+  />
+  <link
+    rel="alternate"
+    type="application/json"
+    href="https://magellanpower.com.au/wp-json/wp/v2/pages/39"
+  />
+ 
+  <link
+    rel="icon"
+    href="../Logo/tetratek logo-bb1.png"
+    sizes="32x32"
+  />
+  <link
+    rel="icon"
+    href="../Logo/tetratek logo-bb1.png"
+    sizes="192x192"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="../Logo/tetratek logo-bb1.png"
+  />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-0RPF7Q2J1P");
+    </script>
+    <script type="text/javascript">
+      _linkedin_partner_id = "4956036";
+      window._linkedin_data_partner_ids =
+        window._linkedin_data_partner_ids || [];
+      window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+      (function (l) {
+        if (!l) {
+          window.lintrk = function (a, b) {
+            window.lintrk.q.push([a, b]);
+          };
+          window.lintrk.q = [];
+        }
+        var s = document.getElementsByTagName("script")[0];
+        var b = document.createElement("script");
+        b.type = "text/javascript";
+        b.async = true;
+        b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+        s.parentNode.insertBefore(b, s);
+      })(window.lintrk);
+    </script>
+  </head>
+  <body
+    class="page-template page-template-templates page-template-about-us-page page-template-templatesabout-us-page-php page page-id-1465"
+  >
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none;"
+        alt
+        src="https://px.ads.linkedin.com/collect/?pid=4956036&amp;fmt=gif"
+      />
+    </noscript>
+    <header>
+		<div class="container">
+		  <div class="header">
+			<div class="logo">
+			  <a href="../" ><img src="../Logo/tetratek logo-bb2.png" alt /></a>
+			</div>
+			<div id="nav">
+			  <a href="#" id="menubtn"
+				><span></span><span></span><span></span><span></span
+			  ></a>
+			  <ul id="menu-main-menu" class="menu">
+				<li
+				  id="menu-item-153"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153"
+				>
+				  <a href="../our-service/">Our Services</a>
+				</li>
+				<li
+				  id="menu-item-201"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-201"
+				>
+				  <a href="../our-process/">Our Process</a>
+				</li>
+				<li
+				  id="menu-item-1434"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1434"
+				>
+				  <a href="../our-strength/">Our Strengths</a>
+				  <!-- <ul class="sub-menu">
+					<li
+					  id="menu-item-1437"
+					  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1437"
+					>
+					  <a href="ups-systems/">UPS Systems</a>
+					</li>
+					<li
+					  id="menu-item-1436"
+					  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1436"
+					>
+					  <a href="energy-storage/">Energy Storage</a>
+					</li>
+					<li
+					  id="menu-item-1435"
+					  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1435"
+					>
+					  <a href="ev-charging/">EV Charging</a>
+					</li>
+					<li
+					  id="menu-item-1285"
+					  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1285"
+					>
+					  <a href="product-register/">Product Register</a>
+					</li>
+				  </ul> -->
+				</li>
+				<!-- <li
+				  id="menu-item-1837"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1837"
+				>
+				  <a href="4r/">4R</a>
+				</li> -->
+				<li
+				  id="menu-item-1133"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1133"
+				>
+				  <a href="../support/">Support</a>
+				</li>
+				<li
+				  id="menu-item-1496"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1496"
+				>
+				  <a href="../about-us/">About Us</a>
+				</li>
+				<!-- <li
+				  id="menu-item-377"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-377"
+				>
+				  <a href="news/">News</a>
+				</li> -->
+				<!-- <li
+				  id="menu-item-1777"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1777"
+				>
+				  <a href="resources/">Resources</a>
+				</li> -->
+				<li
+				  id="menu-item-309"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-309"
+				>
+				  <a href="../contact-us/">Contact</a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	  </header>
+    <style type="text/css">
+      #content h3 {
+        color: #3b85f7;
+        margin: 0 0 1.5rem;
+      }
+      #content .proj_block h3 {
+        color: #fff;
+        margin: 0;
+      }
+      #content .about_c {
+        width: 100%;
+      }
+      #history {
+        padding: 100px 0;
+      }
+      .slick-track {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .cap-content a .btn-dl {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 40%;
+        opacity: 0;
+        width: max-content;
+        font-family: "arial_novabold";
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        padding: 1.25rem 2.688rem 1.25rem 4.375rem;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #fff;
+        border-radius: 1.938rem;
+        background-size: 2.188rem auto !important;
+        background: url(../wp-content/themes/magellan/images/down_arr_5.png)
+          no-repeat 0.875rem center #f05926;
+      }
+      .cap-content a {
+        box-shadow: 0px 2px 5px rgb(0 0 0 / 64%);
+      }
+      .cap-content a:hover .btn-dl {
+        opacity: 1 !important;
+      }
+      .cap-content h4 {
+        margin: 25px 0;
+        text-align: center;
+        padding: 0 15px;
+      }
+      .cap-content a:hover img {
+        filter: brightness(0.5);
+      }
+      .cap-content a .btn-dl:hover {
+        filter: brightness(1.15);
+      }
+      .our-partners .slick-track {
+        display: flex;
+        justify-content: center;
+      }
+      .our-partners .slick-track .op-item {
+        text-align: center;
+      }
+      .our-partners .slick-track .op-item img {
+        height: 80px;
+      }
+      .our-partners {
+        margin-top: 50px;
+      }
+      .history-item .info .desc ul {
+        margin: 0 0 0 15px;
+        padding: 0;
+        list-style-type: disc;
+      }
+      .history-grid .item:nth-child(odd) .year {
+        background-image: url(../wp-content/uploads/2023/06/line-m-history2.webp);
+        margin-top: -60px;
+        top: 212px;
+      }
+      .history-grid .item:nth-child(even) .year {
+        background-image: url(../wp-content/uploads/2023/06/line-m-history2.webp);
+        top: 200px;
+      }
+      .history-item .info .desc ul li::marker {
+        color: #d94127;
+      }
+      .history-item .info .desc ul li {
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+      .history-grid .item.slick-slide.slick-active {
+        opacity: 1;
+      }
+      .history-grid .item:nth-child(odd) {
+        padding-bottom: 284px;
+        top: -20px;
+      }
+      .history-grid .item:nth-child(even) {
+        padding-top: 260px;
+      }
+      .history-item .history-img {
+        display: table-cell;
+        vertical-align: top;
+        position: relative;
+      }
+      .history-item .image {
+        width: 170px;
+        height: 170px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-color: #fff;
+        border-radius: 0;
+        position: relative;
+      }
+      .history-item .info {
+        display: table-cell;
+        vertical-align: top;
+        padding-left: 15px;
+        font-size: 16px;
+        line-height: 1.2;
+      }
+      .history-item .info h4 {
+        background: #3b85f7;
+        margin-bottom: 10px;
+        display: inline-block;
+        color: #fff;
+        position: relative;
+        font-weight: 700;
+        padding: 7px 20px;
+        left: -35px;
+      }
+      .history-grid .slick-arrow,
+      .slick-dots {
+        bottom: 0;
+        position: absolute;
+      }
+      .slick-dots {
+        bottom: 3px;
+        display: block;
+        width: 100%;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        margin-left: -70px;
+      }
+      .slick-dots li,
+      .home-slider .slick-dots li {
+        font-size: 0;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 5px !important;
+      }
+      .slick-dots li button,
+      .home-slider .slick-dots li button {
+        display: block;
+        font-size: 1px;
+        tex-indent: -9999px;
+        width: 12px;
+        height: 12px;
+        cursor: pointer;
+        border: 0;
+        position: relative;
+        padding: 0;
+        border-radius: 50%;
+        background: #b1b1b1;
+      }
+      .slick-dots li.slick-active button {
+        background: #2c1d3d;
+      }
+      .history-grid .slick-arrow.slick-disabled {
+        display: none;
+      }
+      .slick-slider .slide-arrow {
+        position: absolute;
+        top: 47%;
+        margin-top: -15px;
+        cursor: pointer;
+      }
+      .prev-arrow {
+        background: #3b85f7;
+        color: #fff;
+        left: -55px;
+        width: 50px;
+        height: 50px;
+        padding: 11px 14px;
+        border-radius: 50%;
+        line-height: 1.2;
+        font-size: 26px;
+        z-index: 9;
+      }
+      .next-arrow {
+        background: #3b85f7;
+        color: #fff;
+        right: -55px;
+        width: 50px;
+        height: 50px;
+        padding: 11px 14px;
+        border-radius: 50%;
+        line-height: 1.2;
+        font-size: 26px;
+        z-index: 9;
+      }
+
+      @media (min-width: 768px) {
+        .history-item {
+          display: table;
+        }
+        .history-grid {
+          margin: 20px;
+          padding: 55px 70px 0;
+          background-image: url(../wp-content/uploads/2023/06/line-m-history.webp);
+          background-repeat: repeat-x;
+          background-position: center 255px;
+          position: relative;
+        }
+        .history-grid .slick-list {
+          overflow: visible;
+        }
+        .history-grid .item {
+          margin: 0 -70px;
+          opacity: 0;
+          position: relative;
+          float: left;
+          height: 100%;
+          min-height: 1px;
+        }
+        .history-grid .item .year {
+          position: absolute;
+          color: #e0e0e0;
+          font-size: 15px;
+          line-height: 50px;
+          padding: 10px 20px 10px 0;
+          left: 15px;
+          background-repeat: no-repeat;
+          background-position: right center;
+          margin-top: 0;
+        }
+        /* .history-grid .item:nth-child(odd) {
+    left: 200px;
+}   
+.history-grid .item:nth-child(even) {
+    right: 70px;
+}    */
+      }
+
+      @media (max-width: 767px) {
+        .history-grid {
+          position: relative;
+          padding: 30px 0px 30px;
+          background-position: bottom center;
+        }
+        .recent-casestudy2 .slick-dots {
+          margin-left: 0;
+        }
+        .slick-dots {
+          margin-left: 0;
+          bottom: -20px;
+        }
+        .history-grid .item {
+          margin: 0px;
+        }
+        .history-grid .item:nth-child(odd) {
+          padding-top: 0px;
+          padding-bottom: 0px;
+        }
+        .history-grid .item:nth-child(even) {
+          padding-top: 0px;
+          padding-bottom: 0px;
+        }
+        .history-grid .item:nth-child(odd) .year {
+          margin-top: 0px;
+          top: 125px;
+          left: 17px;
+          background-repeat: repeat-y;
+          line-height: 110px;
+        }
+        .history-grid .item:nth-child(even) .year {
+          top: 130px;
+          left: 17px;
+          background-repeat: repeat-y;
+          line-height: 105px;
+        }
+        .recent-casestudy2 .slick-dots {
+          bottom: -60px;
+        }
+        .history-grid .slick-prev,
+        .history-grid .slick-next {
+          bottom: -21px;
+        }
+        .industries-mining .desc p {
+          display: none;
+        }
+        .industries-mining .desc p:first-child {
+          display: block;
+        }
+        .history-grid .slick-prev {
+          margin-left: 0px;
+          left: 0px;
+        }
+        .history-grid .slick-next {
+          margin-right: 0px;
+          right: 0px;
+        }
+        .history-grid {
+          margin: 0px;
+        }
+        .history-grid {
+          max-width: 320px;
+          margin: auto;
+        }
+        .history-grid .item:nth-child(odd) .year,
+        .history-grid .item:nth-child(even) .year {
+          display: none;
+        }
+        .slick-dots li,
+        .home-slider .slick-dots li {
+          margin: 0px 2px !important;
+        }
+        .slick-dots li button,
+        .home-slider .slick-dots li button {
+          height: 10px;
+          width: 10px;
+          z-index: 999;
+        }
+        .history-item .image {
+          width: 140px;
+          height: 95px;
+        }
+        .history-grid .slick-arrow {
+          display: none !important;
+        }
+        .history-grid .slick-track {
+          display: flex;
+        }
+        .history-grid .slick-list.draggable {
+          overflow: hidden;
+        }
+        #history {
+          padding: 30px 0;
+        }
+        ul.cap-content {
+          margin-top: 20px;
+        }
+        ul.cap-content {
+          margin-bottom: 0px;
+        }
+        .our-partners {
+          margin-top: 0px;
+        }
+        .our-partners .slick-track .op-item img {
+          height: 35px;
+          width: auto;
+        }
+        .cap-content h4 {
+          margin: 15px 0;
+        }
+        .cap-content .col-sm-6 {
+          margin-bottom: 30px;
+        }
+        .cap-content h4 {
+          padding: 0;
+        }
+        .row.cap-content .col-sm-4 {
+          margin-bottom: 15px;
+        }
+        #history .row {
+          justify-content: center;
+        }
+      }
+    </style>
+    <div id="content" class="about_page has_banner">
+      <div
+        class="banner_bg"
+        style="
+          background-image: url(../Image/Electrical-installation-915075.jpg);
+        "
+      ></div>
+      <div class="container">
+        <div id="breadcrumb">
+          <span
+            ><span><a href="../">< Home</a></span></span
+          >
+        </div>
+        <h1>Our Story</h1>
+        <div class="inner_content">
+          <div class="about_c" data-aos="fade-up" data-aos-duration="1250">
+            <h3>Our Story</h3>
+            <p>
+                Our multi-industry expertise and experience in the power network leading us in building effective solutions for the 
+                present and future market needs focusing on supply chain and services with commitment and standards.
+            </p>
+            <p>
+                TTS strongly believe that success and growth are direct derivatives of ‘Customer Satisfaction’ through quality 
+                services with best engineering approach and services delivered on time within budget 
+            </p>
+            <p>
+                With a complete understanding of current global electrical standards, trends and policies, TTS is fully equipped 
+                to meet any challenges of Power Industry and is constantly working on innovative technologies to power our 
+                clients into a smooth transition for the future.
+            </p>
+            
+          </div>
+        </div>
+      </div>
+      <!-- <div
+        id="history"
+        style="
+          background-image: url(../wp-content/uploads/2023/06/history_bg.webp);
+        "
+      >
+        <div class="container">
+          <h3>Company History</h3>
+          <p>
+            Our story is a history of innovation and dedication to achieving
+            excellence.
+          </p>
+          <div class="history-grid recent-casestudy">
+            <div class="item">
+              <p class="year">.......</p>
+              <div class="history-item clearfix">
+                <div class="history-img">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(../wp-content/uploads/2023/06/2015-image.webp);
+                    "
+                  ></div>
+                </div>
+                <div class="info">
+                  <h4>1991</h4>
+                  <div class="desc">
+                    <ul>
+                      <li>Inception of POWERTRONICS</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <p class="year">.......</p>
+              <div class="history-item clearfix">
+                <div class="history-img">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(../wp-content/uploads/2023/06/2016-image.webp);
+                    "
+                  ></div>
+                </div>
+                <div class="info">
+                  <h4>1995</h4>
+                  <div class="desc">
+                    <ul>
+                      <li>
+                        <span
+                          class="ui-provider bvp bvq c d e f g h i j k l m n o p q r s t bvr bvs w x y z ab ac ae af ag ah ai aj ak"
+                          dir="ltr"
+                          >POWERTRONICS </span
+                        >renamed to<br />
+                        Tetratektronics
+                      </li>
+                      <li>Development of MCRI</li>
+                      <li>O&rsquo;Connor location</li>
+                      <li>10+ employees</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <p class="year">.......</p>
+              <div class="history-item clearfix">
+                <div class="history-img">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(../wp-content/uploads/2023/06/2017-image.webp);
+                    "
+                  ></div>
+                </div>
+                <div class="info">
+                  <h4>2007</h4>
+                  <div class="desc">
+                    <ul>
+                      <li>Tetratektronics renamed to Tetratek</li>
+                      <li>
+                        Development of MCRII + Dual Conversion/Bidirectional UPS
+                      </li>
+                      <li>Bibra Lake location (Cocos Drive)</li>
+                      <li>30 employees</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <p class="year">.......</p>
+              <div class="history-item clearfix">
+                <div class="history-img">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(../wp-content/uploads/2023/06/2018-image.webp);
+                    "
+                  ></div>
+                </div>
+                <div class="info">
+                  <h4>2009</h4>
+                  <div class="desc">
+                    <ul>
+                      <li>Development of Grid Utility Support System (GUSS)</li>
+                      <li>Logo update</li>
+                      <li>30+ employees</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <p class="year">.......</p>
+              <div class="history-item clearfix">
+                <div class="history-img">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(../wp-content/uploads/2023/06/2019-image.webp);
+                    "
+                  ></div>
+                </div>
+                <div class="info">
+                  <h4>2013</h4>
+                  <div class="desc">
+                    <ul>
+                      <li>
+                        Development of HESS + Utility Scale Energy Storage
+                      </li>
+                      <li>Expanded Bibra Lake location (Bushland Ridge)</li>
+                      <li>50+ employees</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <p class="year">.......</p>
+              <div class="history-item clearfix">
+                <div class="history-img">
+                  <div
+                    class="image"
+                    style="
+                      background-image: url(../wp-content/uploads/2023/06/2020-image.webp);
+                    "
+                  ></div>
+                </div>
+                <div class="info">
+                  <h4>2020</h4>
+                  <div class="desc">
+                    <ul>
+                      <li>New branding and website</li>
+                      <li>60+ employees</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- <div id="history" style="background: #fff;">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-sm-5">
+              <h3>Affiliations</h3>
+              <h4
+                style="color: #103145; font-family: &#x27;arial_novaregular&#x27;; line-height: 1.3;"
+              >
+                Tetratek is also a member of both
+                <a
+                  style="text-decoration: underline;"
+             
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><strong>Battery Stewardship Council</strong></a
+                >
+                and
+                <a
+                  style="text-decoration: underline;"
+        
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><strong>Future Battery Industries CRC.</strong></a
+                >
+              </h4>
+            </div>
+            <div class="col-sm-7">
+              <img
+                decoding="async"
+                class="alignnone size-medium wp-image-1491"
+                src="../wp-content/uploads/2023/07/Affiliations-logo.webp"
+                alt
+              />
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div id="history">
+        <div class="container">
+          <h3 style="text-align: center;">Our Services</h3>
+          <div class="row cap-content">
+            <div class="col-sm-4 col-xs-6">
+              <a
+                href="../our-service/"
+                class=" "
+                
+          
+              >
+                <img
+                  src="../Image/TnS.png"
+                 
+                />
+               
+              </a>
+              <h4> Trading & Sourcing of electrical equipment</h4>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <a
+                href="../our-service/"
+               
+               
+              >
+                <img
+                  src="../Image/TC.png"
+                 
+                />
+              
+              </a>
+              <h4> Testing & Commissioning services</h4>
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <a
+                href="../our-service/"
+              
+              
+                
+              >
+                <img
+                  src="../Image/amc.png"
+                  
+                />
+             
+              </a>
+              <h4> AMC Services</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div id="history" style="background: #fff;">
+        <div class="container">
+          <h3 style="text-align: center;">Our Partners</h3>
+          <div class="our-partners">
+            <div class="op-item">
+              <a
+                href="https://mayfieldindustries.com.au/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="../wp-content/uploads/2023/07/mayfield.webp"
+                  alt="mayfield"
+                />
+              </a>
+            </div>
+            <div class="op-item">
+              <a
+                href="https://batteryrecycling.org.au/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="../wp-content/uploads/2023/07/ABRI.webp" alt="ABRI" />
+              </a>
+            </div>
+            <div class="op-item">
+              <a
+                href="https://vines.net.vn/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="../wp-content/uploads/2023/07/VinES.webp"
+                  alt="VinES"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="container">
+        <div class="rel_proj_list" data-aos="fade-up" data-aos-duration="1250">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="proj_block">
+                <script type="text/javascript" style="display: none;">
+                  //<![CDATA[
+                  window.__mirage2 = {
+                    petok: "HESc2CBqTaAI43jt26DCBkSEQjlYXANU5a.XdPPZ6hs-1800-0",
+                  };
+                  //]]>
+                </script>
+                <script
+                  type="text/javascript"
+                  src="https://ajax.cloudflare.com/cdn-cgi/scripts/04b3eb47/cloudflare-static/mirage2.min.js"
+                ></script>
+                <img
+                  data-cfsrc="../Image/Engineer-controls-the-machine-828099.jpg"
+                  alt
+                  style="display: none; visibility: hidden;"
+                /><noscript
+                  ><img src="../Image/Engineer-controls-the-machine-828099.jpg" alt
+                /></noscript>
+                <div class="cap">
+                  <h3>Our Process</h3>
+                  <a href="../our-process/" class="arr"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="proj_block">
+                <img
+                  data-cfsrc="../Image/Onnecting-wire-to-relay-1673314.jpg"
+                  alt
+                  style="display: none; visibility: hidden;"
+                /><noscript
+                  ><img
+                    src="../Image/Onnecting-wire-to-relay-1673314.jpg"
+                    alt
+                /></noscript>
+                <div class="cap">
+                  <h3>Our Strengths</h3>
+                  <a href="../our-strength/" class="arr"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display: none;">
+      <div id="dl-modal" class="cta-form">
+        <script type="text/javascript"></script>
+        <div
+          class="gf_browser_chrome gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework"
+          data-form-theme="legacy"
+          data-form-index="0"
+          id="gform_wrapper_10"
+        >
+          <div id="gf_10" class="gform_anchor" tabindex="-1"></div>
+          <form
+            method="post"
+            enctype="multipart/form-data"
+            target="gform_ajax_frame_10"
+            id="gform_10"
+            action="/about-us/#gf_10"
+            data-formid="10"
+            novalidate
+          >
+            <div
+              class="gf_invisible ginput_recaptchav3"
+              data-sitekey="6LfNsx0jAAAAAJl4LG_7WehX5jYwAn1O8Uv1L-SA"
+              data-tabindex="0"
+            >
+              <input
+                id="input_7244357ea38a2dde9b3c700a81956898"
+                class="gfield_recaptcha_response"
+                type="hidden"
+                name="input_7244357ea38a2dde9b3c700a81956898"
+                value
+              />
+            </div>
+            <div class="gform-body gform_body">
+              <ul
+                id="gform_fields_10"
+                class="gform_fields top_label form_sublabel_below description_below"
+              >
+                <li
+                  id="field_10_5"
+                  class="gfield gfield--type-html gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below gfield--no-description field_description_below gfield_visibility_visible"
+                  data-js-reload="field_10_5"
+                >
+                  <h4 class="gform_title" style="text-align: center;">
+                    Thanks For Requesting Our Documents
+                  </h4>
+                  <p style="text-align: center;">
+                    Please provide us quick details before downloading the
+                    document
+                  </p>
+                </li>
+                <li
+                  class="gfmc-column gfmc-column100 gfmc-row-1-column gfmc-row-1-col-1-of-1"
+                >
+                  <ul class="flex-wrapper flex-wrapper-1">
+                    <li
+                      id="field_10_6"
+                      class="gfield gfield--type-name gfield_contains_required field_sublabel_below gfield--no-description field_description_below gfield_visibility_visible"
+                      data-js-reload="field_10_6"
+                    >
+                      <label
+                        class="gfield_label gform-field-label gfield_label_before_complex"
+                        >Name<span class="gfield_required"
+                          ><span
+                            class="gfield_required gfield_required_asterisk"
+                            >*</span
+                          ></span
+                        ></label
+                      >
+                      <div
+                        class="ginput_complex ginput_container ginput_container--name no_prefix has_first_name no_middle_name has_last_name no_suffix gf_name_has_2 ginput_container_name gform-grid-row"
+                        id="input_10_6"
+                      >
+                        <span
+                          id="input_10_6_3_container"
+                          class="name_first gform-grid-col gform-grid-col--size-auto"
+                        >
+                          <input
+                            type="text"
+                            name="input_6.3"
+                            id="input_10_6_3"
+                            value
+                            aria-required="true"
+                          />
+                          <label
+                            for="input_10_6_3"
+                            class="gform-field-label gform-field-label--type-sub"
+                            >First</label
+                          >
+                        </span>
+                        <span
+                          id="input_10_6_6_container"
+                          class="name_last gform-grid-col gform-grid-col--size-auto"
+                        >
+                          <input
+                            type="text"
+                            name="input_6.6"
+                            id="input_10_6_6"
+                            value
+                            aria-required="true"
+                          />
+                          <label
+                            for="input_10_6_6"
+                            class="gform-field-label gform-field-label--type-sub"
+                            >Last</label
+                          >
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="gfmc-column gfmc-column50 gfmc-row-2-column gfmc-row-2-col-1-of-2"
+                >
+                  <ul class="flex-wrapper flex-wrapper-2">
+                    <li
+                      id="field_10_9"
+                      class="gfield gfield--type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below gfield_visibility_visible"
+                      data-js-reload="field_10_9"
+                    >
+                      <label
+                        class="gfield_label gform-field-label"
+                        for="input_10_9"
+                        >Email<span class="gfield_required"
+                          ><span
+                            class="gfield_required gfield_required_asterisk"
+                            >*</span
+                          ></span
+                        ></label
+                      >
+                      <div class="ginput_container ginput_container_email">
+                        <input
+                          name="input_9"
+                          id="input_10_9"
+                          type="email"
+                          value
+                          class="medium"
+                          aria-required="true"
+                          aria-invalid="false"
+                        />
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="gfmc-column gfmc-column50 gfmc-row-2-column gfmc-row-2-col-2-of-2"
+                >
+                  <ul class="flex-wrapper flex-wrapper-2">
+                    <li
+                      id="field_10_10"
+                      class="gfield gfield--type-text gfield_contains_required field_sublabel_below gfield--no-description field_description_below gfield_visibility_visible"
+                      data-js-reload="field_10_10"
+                    >
+                      <label
+                        class="gfield_label gform-field-label"
+                        for="input_10_10"
+                        >Company<span class="gfield_required"
+                          ><span
+                            class="gfield_required gfield_required_asterisk"
+                            >*</span
+                          ></span
+                        ></label
+                      >
+                      <div class="ginput_container ginput_container_text">
+                        <input
+                          name="input_10"
+                          id="input_10_10"
+                          type="text"
+                          value
+                          class="medium"
+                          aria-required="true"
+                          aria-invalid="false"
+                        />
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  id="field_10_14"
+                  class="gfield gfield--type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_below gfield_visibility_visible"
+                  data-js-reload="field_10_14"
+                >
+                  <div class="ginput_container ginput_container_text">
+                    <input
+                      name="input_14"
+                      id="input_10_14"
+                      type="hidden"
+                      class="gform_hidden"
+                      aria-invalid="false"
+                      value
+                    />
+                  </div>
+                </li>
+                <li
+                  id="field_10_12"
+                  class="gfield gfield--type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_below gfield_visibility_visible"
+                  data-js-reload="field_10_12"
+                >
+                  <div class="ginput_container ginput_container_text">
+                    <input
+                      name="input_12"
+                      id="input_10_12"
+                      type="hidden"
+                      class="gform_hidden"
+                      aria-invalid="false"
+                      value
+                    />
+                  </div>
+                </li>
+                <li
+                  id="field_10_13"
+                  class="gfield gfield--type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below gfield_visibility_visible"
+                  data-js-reload="field_10_13"
+                >
+                  <div class="ginput_container ginput_container_text">
+                    <input
+                      name="input_13"
+                      id="input_10_13"
+                      type="hidden"
+                      class="gform_hidden"
+                      aria-invalid="false"
+                      value="Web Form"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="gform_footer top_label">
+              <input
+                type="submit"
+                id="gform_submit_button_10"
+                class="gform_button button"
+                value="Submit"
+                onclick='if(window["gf_submitting_10"]){return false;}  if( !jQuery("#gform_10")[0].checkValidity || jQuery("#gform_10")[0].checkValidity()){window["gf_submitting_10"]=true;}  '
+                onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_10"]){return false;} if( !jQuery("#gform_10")[0].checkValidity || jQuery("#gform_10")[0].checkValidity()){window["gf_submitting_10"]=true;}  jQuery("#gform_10").trigger("submit",[true]); }'
+              />
+              <input
+                type="hidden"
+                name="gform_ajax"
+                value="form_id=10&amp;title=&amp;description=&amp;tabindex=0"
+              />
+              <input
+                type="hidden"
+                class="gform_hidden"
+                name="is_submit_10"
+                value="1"
+              />
+              <input
+                type="hidden"
+                class="gform_hidden"
+                name="gform_submit"
+                value="10"
+              />
+              <input
+                type="hidden"
+                class="gform_hidden"
+                name="gform_unique_id"
+                value
+              />
+              <input
+                type="hidden"
+                class="gform_hidden"
+                name="state_10"
+                value="WyJbXSIsIjQ1ZjU0YjQyOWNkNDdhODAyYWNlOTYzYTQzZDNlOTNlIl0="
+              />
+              <input
+                type="hidden"
+                class="gform_hidden"
+                name="gform_target_page_number_10"
+                id="gform_target_page_number_10"
+                value="0"
+              />
+              <input
+                type="hidden"
+                class="gform_hidden"
+                name="gform_source_page_number_10"
+                id="gform_source_page_number_10"
+                value="1"
+              />
+              <input type="hidden" name="gform_field_values" value />
+            </div>
+          </form>
+        </div>
+        <iframe
+          style="display: none; width: 0px; height: 0px;"
+          src="about:blank"
+          name="gform_ajax_frame_10"
+          id="gform_ajax_frame_10"
+          title="This iframe contains the logic required to handle Ajax powered Gravity Forms."
+        ></iframe>
+        <script type="text/javascript">
+          gform.initializeOnLoaded(function () {
+            gformInitSpinner(
+              10,
+              "https://magellanpower.com.au/wp-content/plugins/gravityforms/images/spinner.svg",
+              true
+            );
+            jQuery("#gform_ajax_frame_10").on("load", function () {
+              var contents = jQuery(this).contents().find("*").html();
+              var is_postback = contents.indexOf("GF_AJAX_POSTBACK") >= 0;
+              if (!is_postback) {
+                return;
+              }
+              var form_content = jQuery(this)
+                .contents()
+                .find("#gform_wrapper_10");
+              var is_confirmation =
+                jQuery(this).contents().find("#gform_confirmation_wrapper_10")
+                  .length > 0;
+              var is_redirect = contents.indexOf("gformRedirect(){") >= 0;
+              var is_form =
+                form_content.length > 0 && !is_redirect && !is_confirmation;
+              var mt =
+                parseInt(jQuery("html").css("margin-top"), 10) +
+                parseInt(jQuery("body").css("margin-top"), 10) +
+                100;
+              if (is_form) {
+                jQuery("#gform_wrapper_10").html(form_content.html());
+                if (form_content.hasClass("gform_validation_error")) {
+                  jQuery("#gform_wrapper_10").addClass(
+                    "gform_validation_error"
+                  );
+                } else {
+                  jQuery("#gform_wrapper_10").removeClass(
+                    "gform_validation_error"
+                  );
+                }
+                setTimeout(function () {
+                  /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(
+                    document
+                  ).scrollTop(jQuery("#gform_wrapper_10").offset().top - mt);
+                }, 50);
+                if (window["gformInitDatepicker"]) {
+                  gformInitDatepicker();
+                }
+                if (window["gformInitPriceFields"]) {
+                  gformInitPriceFields();
+                }
+                var current_page = jQuery("#gform_source_page_number_10").val();
+                gformInitSpinner(
+                  10,
+                  "https://magellanpower.com.au/wp-content/plugins/gravityforms/images/spinner.svg",
+                  true
+                );
+                jQuery(document).trigger("gform_page_loaded", [
+                  10,
+                  current_page,
+                ]);
+                window["gf_submitting_10"] = false;
+              } else if (!is_redirect) {
+                var confirmation_content = jQuery(this)
+                  .contents()
+                  .find(".GF_AJAX_POSTBACK")
+                  .html();
+                if (!confirmation_content) {
+                  confirmation_content = contents;
+                }
+                setTimeout(function () {
+                  jQuery("#gform_wrapper_10").replaceWith(confirmation_content);
+                  jQuery(document).scrollTop(
+                    jQuery("#gf_10").offset().top - mt
+                  );
+                  jQuery(document).trigger("gform_confirmation_loaded", [10]);
+                  window["gf_submitting_10"] = false;
+                  wp.a11y.speak(
+                    jQuery("#gform_confirmation_message_10").text()
+                  );
+                }, 50);
+              } else {
+                jQuery("#gform_10").append(contents);
+                if (window["gformRedirect"]) {
+                  gformRedirect();
+                }
+              }
+              jQuery(document).trigger("gform_post_render", [10, current_page]);
+              gform.utils.trigger({
+                event: "gform/postRender",
+                native: false,
+                data: { formId: 10, currentPage: current_page },
+              });
+            });
+          });
+        </script>
+      </div>
+    </div>
+    <div id="cta">
+      <div class="container">
+        <div class="cta_block">
+          <h3>We&rsquo;re here to help.</h3>
+          <a href="../contact-us/" target class="btn blue_btn">Get in touch</a>
+        </div>
+      </div>
+    </div>
+    <footer>
+		<div class="container">
+		  <div class="f_top">
+			<div class="f_block f_block_1">
+			  <h3>Subscribe to Our Newsletter</h3>
+			  <div class="newsletter">
+				<input type="text" placeholder="Enter your email address" />
+				<input type="submit" value="Send" class="send_btn" />
+			  </div>
+			</div>
+			<div class="f_block f_block_2">
+			  <h3>Tetratek</h3>
+			  <ul id="menu-sitemap-menu" class="menu">
+				<li
+				  id="menu-item-101"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-39 current_page_item menu-item-101"
+				>
+				  <a href="../" aria-current="page">Home</a>
+				</li>
+				<li
+				  id="menu-item-154"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154"
+				>
+				  <a href="../our-service/">Our Services</a>
+				</li>
+				<li
+				  id="menu-item-202"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"
+				>
+				  <a href="../our-process/">Our Process</a>
+				</li>
+				<li     
+				  id="menu-item-177"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-177"
+				>
+				  <a href="../our-strength/">Our Strengths</a>
+				  <!-- <ul class="sub-menu">
+					<li
+					  id="menu-item-1137"
+					  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1137"
+					>
+					  <a href="service/">Customer Service &#038; Support</a>
+					</li>
+				  </ul> -->
+				</li>
+				<li
+				  id="menu-item-280"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280"
+				>
+				  <a href="../about-us/">About Us</a>
+				</li>
+				<!-- <li
+				  id="menu-item-376"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-376"
+				>
+				  <a href="news/">News</a>
+				</li> -->
+				<li
+				  id="menu-item-310"
+				  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-310"
+				>
+				  <a href="../contact-us/">Contact Us</a>
+				</li>
+			  </ul>
+			</div>
+			<div class="f_block f_block_3">
+			  <h3>Our services</h3>
+			  <ul id="menu-policies-menu" class="menu">
+				<li
+				  id="menu-item-108"
+				  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-108"
+				>
+				  <a href="../our-service/"
+					>Trading & Sourcing</a
+				  >
+				</li>
+				<li
+				  id="menu-item-110"
+				  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-110"
+				>
+				  <a
+					href="../our-service/"
+					>Electrical installation testing and commissioning</a
+				  >
+				</li>
+				<li
+				  id="menu-item-1536"
+				  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1536"
+				>
+				  <a href="../our-service/"
+					>AMC Services</a
+				  >
+				</li>
+			  </ul>
+			</div>
+			<div class="f_block f_block_4">
+			  <h3>Contact Us</h3>
+			  <p>
+				<a href="tel:+610894346621"
+				  ><span class="icon"
+					><img
+					  data-cfsrc="https://magellanpower.com.au/wp-content/themes/magellan/images/phone.png"
+					  alt
+					  style="display: none; visibility: hidden;" /><noscript
+					  ><img
+						src="wp-content/themes/magellan/images/phone.png"
+						alt /></noscript></span
+				  >  +91 9962409003 </a
+				>
+			  </p>
+			  <p>
+				<span class="icon"
+				  ><img
+					data-cfsrc="https://magellanpower.com.au/wp-content/themes/magellan/images/map_marker.png"
+					alt
+					style="display: none; visibility: hidden;" /><noscript
+					><img
+					  src="wp-content/themes/magellan/images/map_marker.png"
+					  alt /></noscript></span
+				>9, 2nd Street
+                        Meenakshi Nagar <br>
+                        Pallikaranai,
+                        Chennai - 600100.
+			  </p>
+			</div>
+		  </div>
+		  <div class="f_bot">
+			<p>
+			  &copy; 2023 Tetratek |
+			  <a>Privacy Policy</a>    
+			</p>
+			<div class="f_bot_right">
+			  <div class="social">
+				<a
+				  href
+				  target="_blank"
+				  rel="noopener noreferrer"
+				  ><img src="../wp-content/themes/magellan/images/linkedin.svg" alt
+				/></a>
+			  </div>
+			  <div class="f_logo">
+				<a href="../" ><img src="../Logo/tetratek logo-bb2.png" alt /></a>
+			  </div>
+			</div>
+		  </div>
+		  <!-- <p style="font-size: 0.75rem; color: #bbb;">
+			Our website is protected by reCAPTCHA, and the Google Privacy Policy
+			and Terms of Service apply.
+		  </p> -->
+		</div>
+	  </footer>
+    <link
+      rel="stylesheet"
+      id="gravity_forms_theme_reset-css"
+      href="../wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-reset.min.css"
+      type="text/css"
+      media="all"
+    /><link
+      rel="stylesheet"
+      id="gravity_forms_theme_foundation-css"
+      href="../wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-foundation.min.css"
+      type="text/css"
+      media="all"
+    /><link
+      rel="stylesheet"
+      id="gravity_forms_theme_framework-css"
+      href="../wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-framework.min.css"
+      type="text/css"
+      media="all"
+    /><link
+      rel="stylesheet"
+      id="gravity_forms_orbital_theme-css"
+      href="../wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-orbital-theme.min.css"
+      type="text/css"
+      media="all"
+    /><link
+      rel="stylesheet"
+      id="gforms_reset_css-css"
+      href="../wp-content/plugins/gravityforms/legacy/css/formreset.min.css"
+      type="text/css"
+      media="all"
+    /><link
+      rel="stylesheet"
+      id="gforms_formsmain_css-css"
+      href="../wp-content/plugins/gravityforms/legacy/css/formsmain.min.css"
+      type="text/css"
+      media="all"
+    /><link
+      rel="stylesheet"
+      id="gforms_ready_class_css-css"
+      href="../wp-content/plugins/gravityforms/legacy/css/readyclass.min.css"
+      type="text/css"
+      media="all"
+    /><link
+      rel="stylesheet"
+      id="gforms_browsers_css-css"
+      href="../wp-content/plugins/gravityforms/legacy/css/browsers.min.css"
+      type="text/css"
+      media="all"
+    /><link
+      rel="stylesheet"
+      id="gfmc_styles-css"
+      href="../wp-content/plugins/gf-form-multicolumn/includes/public/css/gf-form-multicolumn.min.css"
+      type="text/css"
+      media="all"
+    />
+    <script
+      type="text/javascript"
+      src="../wp-content/plugins/easy-fancybox/fancybox/1.3.28/jquery.fancybox.min.js"
+      id="jquery-fancybox-js"
+    ></script>
+    <script id="jquery-fancybox-js-after" type="text/javascript">
+      var fb_timeout,
+        fb_opts = {
+          overlayShow: true,
+          hideOnOverlayClick: true,
+          overlayOpacity: 0.9,
+          overlayColor: "#000",
+          showCloseButton: true,
+          margin: 20,
+          centerOnScroll: false,
+          enableEscapeButton: true,
+          autoScale: true,
+        };
+      if (typeof easy_fancybox_handler === "undefined") {
+        var easy_fancybox_handler = function () {
+          jQuery(
+            [
+              ".nolightbox",
+              ".js-hover",
+              "a.wp-block-fileesc_html__button",
+              "a.pin-it-button",
+              "a[href*='pinterest.com\/pin\/create']",
+              "a[href*='facebook.com\/share']",
+              "a[href*='twitter.com\/share']",
+            ].join(",")
+          ).addClass("nofancybox");
+          jQuery("a.fancybox-close").on("click", function (e) {
+            e.preventDefault();
+            jQuery.fancybox.close();
+          });
+          /* IMG */
+          var fb_IMG_select = jQuery(
+            'a[href*=".jpg" i]:not(.nofancybox,li.nofancybox>a),area[href*=".jpg" i]:not(.nofancybox),a[href*=".jpeg" i]:not(.nofancybox,li.nofancybox>a),area[href*=".jpeg" i]:not(.nofancybox),a[href*=".png" i]:not(.nofancybox,li.nofancybox>a),area[href*=".png" i]:not(.nofancybox),a[href*=".webp" i]:not(.nofancybox,li.nofancybox>a),area[href*=".webp" i]:not(.nofancybox)'
+          );
+          fb_IMG_select.addClass("fancybox image");
+          var fb_IMG_sections = jQuery(
+            ".gallery,.wp-block-gallery,.tiled-gallery,.wp-block-jetpack-tiled-gallery"
+          );
+          fb_IMG_sections.each(function () {
+            jQuery(this)
+              .find(fb_IMG_select)
+              .attr("rel", "gallery-" + fb_IMG_sections.index(this));
+          });
+          jQuery("a.fancybox,area.fancybox,.fancybox>a").each(function () {
+            jQuery(this).fancybox(
+              jQuery.extend({}, fb_opts, {
+                transitionIn: "elastic",
+                easingIn: "linear",
+                transitionOut: "elastic",
+                easingOut: "linear",
+                opacity: false,
+                hideOnContentClick: false,
+                titleShow: true,
+                titlePosition: "over",
+                titleFromAlt: true,
+                showNavArrows: true,
+                enableKeyboardNav: true,
+                cyclic: false,
+              })
+            );
+          });
+          /* Inline */
+          jQuery(
+            "a.fancybox-inline,area.fancybox-inline,.fancybox-inline>a"
+          ).each(function () {
+            jQuery(this).fancybox(
+              jQuery.extend({}, fb_opts, {
+                type: "inline",
+                autoDimensions: true,
+                scrolling: "no",
+                easingIn: "linear",
+                opacity: false,
+                hideOnContentClick: false,
+                titleShow: false,
+              })
+            );
+          });
+          /* YouTube */
+          jQuery(
+            'a[href*="youtu.be/" i],area[href*="youtu.be/" i],a[href*="youtube.com/" i],area[href*="youtube.com/" i]'
+          )
+            .filter(function () {
+              return this.href.match(/\/(?:youtu\.be|watch\?|embed\/)/);
+            })
+            .not(".nofancybox,li.nofancybox>a")
+            .addClass("fancybox-youtube");
+          jQuery(
+            "a.fancybox-youtube,area.fancybox-youtube,.fancybox-youtube>a"
+          ).each(function () {
+            jQuery(this).fancybox(
+              jQuery.extend({}, fb_opts, {
+                type: "iframe",
+                keepRatio: 1,
+                titleShow: false,
+                titlePosition: "float",
+                titleFromAlt: true,
+                onStart: function (a, i, o) {
+                  var splitOn = a[i].href.indexOf("?");
+                  var urlParms =
+                    splitOn > -1 ? a[i].href.substring(splitOn) : "";
+                  o.allowfullscreen =
+                    urlParms.indexOf("fs=0") > -1 ? false : true;
+                  o.href = a[i].href.replace(
+                    /https?:\/\/(?:www\.)?youtu(?:\.be\/([^\?]+)\??|be\.com\/watch\?(.*(?=v=))v=([^&]+))(.*)/gi,
+                    "https://www.youtube.com/embed/$1$3?$2$4&autoplay=1"
+                  );
+                },
+              })
+            );
+          });
+          /* Vimeo */
+          jQuery('a[href*="vimeo.com/" i],area[href*="vimeo.com/" i]')
+            .filter(function () {
+              return this.href.match(/\/(?:[0-9]+|video\/)/);
+            })
+            .not(".nofancybox,li.nofancybox>a")
+            .addClass("fancybox-vimeo");
+          jQuery("a.fancybox-vimeo,area.fancybox-vimeo,.fancybox-vimeo>a").each(
+            function () {
+              jQuery(this).fancybox(
+                jQuery.extend({}, fb_opts, {
+                  type: "iframe",
+                  width: 1500,
+                  height: 844,
+                  keepRatio: 1,
+                  titleShow: false,
+                  titlePosition: "float",
+                  titleFromAlt: true,
+                  onStart: function (a, i, o) {
+                    var splitOn = a[i].href.indexOf("?");
+                    var urlParms =
+                      splitOn > -1 ? a[i].href.substring(splitOn) : "";
+                    o.allowfullscreen =
+                      urlParms.indexOf("fullscreen=0") > -1 ? false : true;
+                    o.href = a[i].href.replace(
+                      /https?:\/\/(?:www\.)?vimeo\.com\/([0-9]+)\??(.*)/gi,
+                      "https://player.vimeo.com/video/$1?$2&autoplay=1"
+                    );
+                  },
+                })
+              );
+            }
+          );
+        };
+      }
+      var easy_fancybox_auto = function () {
+        setTimeout(function () {
+          jQuery("a#fancybox-auto,#fancybox-auto>a").first().trigger("click");
+        }, 1000);
+      };
+      jQuery(easy_fancybox_handler);
+      jQuery(document).on("post-load", easy_fancybox_handler);
+      jQuery(easy_fancybox_auto);
+    </script>
+    <script
+      type="text/javascript"
+      src="../wp-content/plugins/easy-fancybox/vendor/jquery.easing.min.js"
+      id="jquery-easing-js"
+    ></script>
+    <script type="text/javascript" id="gforms_recaptcha_recaptcha-js-extra">
+      /*  */
+      var gforms_recaptcha_recaptcha_strings = {
+        site_key: "6LfNsx0jAAAAAJl4LG_7WehX5jYwAn1O8Uv1L-SA",
+        ajaxurl: "https:\/\/magellanpower.com.au\/wp-admin\/admin-ajax.php",
+        nonce: "8c5cad9ed6",
+      };
+      /*  */
+    </script>
+    <script
+      type="text/javascript"
+      src="https://www.google.com/recaptcha/api.js?render=6LfNsx0jAAAAAJl4LG_7WehX5jYwAn1O8Uv1L-SA"
+      id="gforms_recaptcha_recaptcha-js"
+    ></script>
+    <script id="gforms_recaptcha_recaptcha-js-after" type="text/javascript">
+      (function ($) {
+        grecaptcha.ready(function () {
+          $(".grecaptcha-badge").css("visibility", "hidden");
+        });
+      })(jQuery);
+    </script>
+    <script
+      type="text/javascript"
+      src="../wp-includes/js/dist/vendor/wp-polyfill-inert.min.js"
+      id="wp-polyfill-inert-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../wp-includes/js/dist/vendor/regenerator-runtime.min.js"
+      id="regenerator-runtime-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../wp-includes/js/dist/vendor/wp-polyfill.min.js"
+      id="wp-polyfill-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../wp-includes/js/dist/dom-ready.min.js"
+      id="wp-dom-ready-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../wp-includes/js/dist/hooks.min.js"
+      id="wp-hooks-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../wp-includes/js/dist/i18n.min.js"
+      id="wp-i18n-js"
+    ></script>
+    <script id="wp-i18n-js-after" type="text/javascript">
+      wp.i18n.setLocaleData({ "text direction\u0004ltr": ["ltr"] });
+    </script>
+    <script
+      type="text/javascript"
+      src="../wp-includes/js/dist/a11y.min.js"
+      id="wp-a11y-js"
+    ></script>
+    <script
+      type="text/javascript"
+      defer="defer"
+      src="../wp-content/plugins/gravityforms/js/jquery.json.min.js"
+      id="gform_json-js"
+    ></script>
+    <script type="text/javascript" id="gform_gravityforms-js-extra">
+      /*  */
+      var gform_i18n = {
+        datepicker: {
+          days: {
+            monday: "Mo",
+            tuesday: "Tu",
+            wednesday: "We",
+            thursday: "Th",
+            friday: "Fr",
+            saturday: "Sa",
+            sunday: "Su",
+          },
+          months: {
+            january: "January",
+            february: "February",
+            march: "March",
+            april: "April",
+            may: "May",
+            june: "June",
+            july: "July",
+            august: "August",
+            september: "September",
+            october: "October",
+            november: "November",
+            december: "December",
+          },
+          firstDay: 1,
+          iconText: "Select date",
+        },
+      };
+      var gf_legacy_multi = [];
+      var gform_gravityforms = {
+        strings: {
+          invalid_file_extension:
+            "This type of file is not allowed. Must be one of the following:",
+          delete_file: "Delete this file",
+          in_progress: "in progress",
+          file_exceeds_limit: "File exceeds size limit",
+          illegal_extension: "This type of file is not allowed.",
+          max_reached: "Maximum number of files reached",
+          unknown_error:
+            "There was a problem while saving the file on the server",
+          currently_uploading: "Please wait for the uploading to complete",
+          cancel: "Cancel",
+          cancel_upload: "Cancel this upload",
+          cancelled: "Cancelled",
+        },
+        vars: {
+          images_url:
+            "https:\/\/magellanpower.com.au\/wp-content\/plugins\/gravityforms\/images",
+        },
+      };
+      var gf_global = {
+        gf_currency_config: {
+          name: "Australian Dollar",
+          symbol_left: "$",
+          symbol_right: "",
+          symbol_padding: " ",
+          thousand_separator: ",",
+          decimal_separator: ".",
+          decimals: 2,
+          code: "AUD",
+        },
+        base_url:
+          "https:\/\/magellanpower.com.au\/wp-content\/plugins\/gravityforms",
+        number_formats: [],
+        spinnerUrl:
+          "https:\/\/magellanpower.com.au\/wp-content\/plugins\/gravityforms\/images\/spinner.svg",
+        version_hash: "6fe47d78fd72481b5e357902a3a12925",
+        strings: {
+          newRowAdded: "New row added.",
+          rowRemoved: "Row removed",
+          formSaved:
+            "The form has been saved.  The content contains the link to return and complete the form.",
+        },
+      };
+      /*  */
+    </script>
+    <script
+      type="text/javascript"
+      defer="defer"
+      src="https://magellanpower.com.au/wp-content/plugins/gravityforms/js/gravityforms.min.js"
+      id="gform_gravityforms-js"
+    ></script>
+    <script
+      type="text/javascript"
+      defer="defer"
+      src="../wp-content/plugins/gravityforms/assets/js/dist/utils.min.js"
+      id="gform_gravityforms_utils-js"
+    ></script>
+    <script
+      type="text/javascript"
+      defer="defer"
+      src="../wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js"
+      id="gform_gravityforms_theme_vendors-js"
+    ></script>
+    <script type="text/javascript" id="gform_gravityforms_theme-js-extra">
+      /*  */
+      var gform_theme_config = {
+        common: {
+          form: {
+            honeypot: { version_hash: "6fe47d78fd72481b5e357902a3a12925" },
+          },
+        },
+        hmr_dev: "",
+        public_path:
+          "https:\/\/magellanpower.com.au\/wp-content\/plugins\/gravityforms\/assets\/js\/dist\/",
+      };
+      /*  */
+    </script>
+    <script
+      type="text/javascript"
+      defer="defer"
+      src="../wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js"
+      id="gform_gravityforms_theme-js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../wp-content/plugins/gravityformsrecaptcha/js/frontend.min.js"
+      id="gforms_recaptcha_frontend-js"
+    ></script>
+    <script type="text/javascript">
+      gform.initializeOnLoaded(function () {
+        jQuery(document).on("gform_post_render", function (
+          event,
+          formId,
+          currentPage
+        ) {
+          if (formId == 10) {
+          }
+        });
+        jQuery(document).bind("gform_post_conditional_logic", function (
+          event,
+          formId,
+          fields,
+          isInit
+        ) {});
+      });
+    </script>
+    <script type="text/javascript">
+      gform.initializeOnLoaded(function () {
+        jQuery(document).trigger("gform_post_render", [10, 1]);
+        gform.utils.trigger({
+          event: "gform/postRender",
+          native: false,
+          data: { formId: 10, currentPage: 1 },
+        });
+      });
+    </script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
